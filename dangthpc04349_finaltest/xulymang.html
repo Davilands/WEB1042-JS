@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dangthpc04349</title>
+</head>
+
+<body>
+    <script>
+        let n = parseInt(prompt("Nhập số phần tử"));
+        // var phone = document.getElementById('phone').value;
+        if (isNaN(n)) {
+            alert("Loại dữ liệu không hợp lệ!");
+            location.reload();
+        }
+        //nhap so phan tu cua mang
+        if (n < 0) {
+            alert("Vui lòng nhập số dương!");
+            location.reload();
+        }
+        let array = new Array();
+        for (let i = 0; i < n; i++) {
+            array[i] = parseInt(prompt("Nhập giá trị Array[" + i + "]: "));
+            if (isNaN(array[i])) {
+                alert("Loại dữ liệu không hợp lệ!");
+                i--;
+            }
+            //push gia tri cho mang ARRAY
+        }
+        let max = array[0];
+        let min = array[0];
+        for (let i = 0; i < array.length; i++) {
+            document.write("Array[" + i + "] = " + array[i] + "<br/>");
+            //Xuat gia tri cua tung phan tu ra man hinh
+            if (array[i] > max) {
+                max = array[i];
+            }
+            if (array[i] < min) {
+                min = array[i];
+            }
+        }
+        document.write("Giá trị lớn nhất trong mảng là : " + max + "<br/>");
+        document.write("Giá trị nhỏ nhất trong mảng là: " + min);
+    </script>
+</body>
+
+</html>

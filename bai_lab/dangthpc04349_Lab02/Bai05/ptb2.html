@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phương trình bâc hai</title>
+</head>
+
+<body>
+    <script>
+        var a, b, c;
+        a = prompt("Nhập vào giá trị của a: ");
+        b = prompt("Nhập vào giá trị của b: ");
+        c = prompt("Nhập vào giá trị của c: ");
+        var delta = Math.pow(b, 2) - 4 * a * c;
+        if (delta < 0) {
+            document.write("Vô nghiệm")
+        } else if (delta == 0) {
+            var x0 = -b / (2 * a);
+            document.write("Phương trình có nghiệm kép: " + x0)
+        } else {
+            var x1, x2;
+            x1 = (-b + Math.sqrt(delta)) / (2 * a);
+            x2 = (-b - Math.sqrt(delta)) / (2 * a);
+            document.write("Phương trình có 2 nghiệm phân biệt: " + x1 + " và " + x2)
+        }
+    </script>
+</body>
+
+</html>

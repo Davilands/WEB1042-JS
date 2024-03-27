@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trần Hữu Đang</title>
+    <script>
+        var f0 = Number(prompt("Nhập f0: "));
+        var f1 = Number(prompt("Nhập f1: "));
+    </script>
+</head>
+
+<body>
+    <script>
+        var i;
+        for (i = 0; i < 10; i++) {
+            var f = f0 + f1;
+            document.write("<span>   " + f + "  </span>");
+            f0 = f1;
+            f1 = f;
+        }
+    </script>
+</body>
+
+</html>

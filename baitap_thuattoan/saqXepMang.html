@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let n = parseInt(prompt("Nhập số phần tử"));
+        let array = new Array();
+        for (let i = 0; i < n; i++) {
+            array[i] = parseInt(prompt("Nhập giá trị Array[" + i + "]: "));
+        }
+
+        function bubbleSort(array) {
+            for (let i = 0; i < array.length - 1; i++) {
+                for (let j = array.length - 1; j > i; j--) {
+                    if (array[j] < array[j - 1]) {
+                        let t = array[j];
+                        array[j] = array[j - 1];
+                        array[j - 1] = t;
+                    }
+                }
+            }
+        }
+        // Sắp xếp mảng theo thứ tự tăng dần
+        // với phương thức sort()
+        array.sort();
+
+        //giảm dần
+        //đảo ngược mảng
+        array.reverse();
+
+        for (let i = 0; i < array.length; i++) {
+            alert("Array[" + i + "] = " + array[i]);
+        }
+    </script>
+</body>
+
+</html>

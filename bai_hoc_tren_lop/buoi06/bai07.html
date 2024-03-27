@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <script type="text/javascript">
+        function chonKem() {
+            var str = "Nhung loai kem ban da chon la:<br/>";
+            var kemAr = document.getElementsByName("ckKem");
+            for (var i = 0; i < kemAr.length; i++) {
+                if (kemAr[i].checked) {
+                    str = str + kemAr[i].value + "<br/>"
+                }
+            }
+            document.getElementById("pKemDaChon").innerHTML = str;
+        }
+    </script>
+</head>
+
+<body>
+    Cac loai kem trong cua hang:<br />
+    <input type="checkbox" value="Kem que" name="ckKem" />Kem que <br />
+    <input type="checkbox" value="Kem dau" name="ckKem" />Kem dau <br />
+    <input type="checkbox" value="Kem bo" name="ckKem" />Kem bo <br />
+    <input type="checkbox" value="Kem vani" name="ckKem" />Kem vani <br />
+    <input type="button" onclick="chonKem();" value="Chon kem" />
+    <p id="pKemDaChon"></p>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 1</title>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+    <script>
+        var out = new Image();
+        out.src = "images/0.JPG"
+
+        var over = new Image();
+        over.src = "images/1.JPG"
+
+        function fover() {
+            var anh = document.getElementById("anh");
+            anh.src = over.src;
+            var pText = document.getElementById("td");
+            pText.style.color = "red";
+            pText.innerHTML = "Hình 2: Khi đưa chuột lên";
+        }
+
+        function fout() {
+            var anh = document.getElementById("anh");
+            anh.src = out.src;
+            var pText = document.getElementById("td");
+            pText.style.color = "black";
+            pText.innerHTML = "Hình 1: Bình thường";
+        }
+    </script>
+</head>
+
+<body>
+    <img src="images/0.JPG" onmouseover="fover()" onmouseout="fout()" id="anh">
+    <h3 id="td">Hình 1: Bình thường</h3>
+</body>
+
+</html>

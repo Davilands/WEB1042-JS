@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slideshow</title>
+    <style>
+        body {
+            text-align: center;
+            margin-left: 30%;
+            width: 30%;
+            border: 1px solid #ddd;
+            box-shadow: 2px 2px 4px #ddd;
+            padding: 20px;
+        }
+        
+        img {
+            width: 100%;
+        }
+        
+        hr {
+            width: 100%;
+        }
+        
+        button {
+            padding: 10px;
+            background-color: #3498db;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            border-radius: 5px;
+            border: none;
+        }
+        
+        button:hover {
+            box-shadow: 0 0 5px #95a5a6;
+        }
+    </style>
+    <script>
+        var images = [];
+        for (var i = 0; i < 5; i++) {
+            images[i] = new Image();
+            images[i].src = "images/" + i + ".JPG";
+        }
+        var index = 0;
+
+        function first() {
+            index = 0;
+            var anh = document.getElementById("anh");
+            anh.src = images[index].src;
+            document.getElementById("dem").innerHTML = index + 1 + "/" + images.length
+        }
+
+        function last() {
+            index = images.length - 1;
+            var anh = document.getElementById("anh");
+            anh.src = images[index].src;
+            document.getElementById("dem").innerHTML = index + 1 + "/" + images.length
+        }
+
+        function next() {
+            index++;
+            if (index >= images.length) {
+                index = 0;
+            }
+            var anh = document.getElementById("anh");
+            anh.src = images[index].src;
+            document.getElementById("dem").innerHTML = index + 1 + "/" + images.length
+        }
+
+        function prev() {
+            index++;
+            if (index >= images.length) {
+                index = 0;
+            }
+            var anh = document.getElementById("anh");
+            anh.src = images[index].src;
+            document.getElementById("dem").innerHTML = index - 1 + "/" + images.length
+        }
+
+        // Tự chạy ảnh
+        setInterval("next()", 2000);
+    </script>
+</head>
+
+<body>
+    <img id="anh" src="images/0.JPG" />
+    <div id="dem">1/5</div>
+    <hr/>
+    <button onclick="first()">First</button>
+    <button onclick="prev()">Prev</button>
+    <button onclick="next()">Next</button>
+    <button onclick="last()">Last</button>
+</body>
+
+</html>

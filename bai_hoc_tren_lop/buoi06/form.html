@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <script type="text/javascript">
+        function validateForm() {
+            var name = document.forms[0].txtName.value;
+            if (name == "") {
+                alert("Hay nhap ten vao!");
+                return false;
+            } else {
+                alert("Hi " + name + " !");
+                return true;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form action="#" onsubmit="return validateForm()">
+        <p>Name: <input type="text" name="txtName" /></p>
+        <p>
+            <input type="submit" value="Submit" /></p>
+    </form>
+</body>
+
+</html>

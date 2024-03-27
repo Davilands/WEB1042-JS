@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <script type="text/javascript">
+        var anhAr = [];
+        var currentIndex = 0;
+
+        function loadAnh() {
+            for (var i = 0; i < 6; i++) {
+                anhAr[i] = new Image();
+                anhAr[i].src = "anh" + i + ".jpg";
+            }
+        }
+
+        function next() {
+            if (currentIndex < 4) {
+                currentIndex++;
+                document.getElementById("hoa").src = anhAr[currentIndex].src;
+            }
+        }
+
+        function back() {
+            if (currentIndex > 0) {
+                currentIndex--;
+                document.getElementById("hoa").src = anhAr[currentIndex].src;
+            }
+        }
+    </script>
+</head>
+
+<body onload="loadAnh();">
+    <img id="hoa" src="https://www.freepik.com/premium-vector/neon-style-text-effect_24750062.htm#&position=3&from_view=home" />
+    <input type="button" value="back" onclick="back();" />
+    <input type="button" value="next" onclick="next();" />
+
+    <img name="img_hoa" src="https://www.freepik.com/premium-vector/neon-style-text-effect_24750062.htm#&position=3&from_view=home" onmouseover="onMouseOverEvent();" onmouseout="onMouseOutEvent();" />
+</body>
+
+</html>

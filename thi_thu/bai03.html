@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dangthpc04349</title>
+    <script>
+        let anhs = [
+            "images/0.JPG",
+            "images/1.JPG",
+            "images/2.JPG",
+            "images/3.JPG",
+            "images/4.JPG",
+            "images/5.JPG",
+        ];
+        let position = 0;
+
+        function showFirst() {
+            position = 0;
+            const anh = document.getElementById("anh");
+            anh.src = anhs[position];
+        }
+
+        function showLast() {
+            position = anhs.length - 1;
+            const anh = document.getElementById("anh");
+            anh.src = anhs[position];
+        }
+
+        function showNext() {
+            if (position < anhs.length - 1) {
+                position++;
+            }
+            const and = document.getElementById("anh");
+            anh.src = anhs[position];
+        }
+
+        function showPrevious() {
+            if (position > 0) {
+                position--;
+            }
+            const anh = document.getElementById("anh");
+            anh.src = anhs[position];
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container" align="center">
+        <div class="slideshow">
+            <img src="images/0.JPG" alt="" id="anh" />
+        </div>
+        <hr />
+        <div class="control">
+            <button class="first" onclick="showFirst()">First</button>
+            <button class="previous" onclick="showPrevious()">Previous</button>
+            <button class="next" onclick="showNext()">Next</button>
+            <button class="last" onclick="showLast()">Last</button>
+        </div>
+    </div>
+</body>
+
+</html>

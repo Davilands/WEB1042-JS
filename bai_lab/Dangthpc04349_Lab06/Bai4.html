@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 4</title>
+    <script src="Bai4.js"></script>
+    <style>
+        body {
+            line-height: 40px;
+            border: 1px solid #ddd;
+            box-shadow: 2px 2px 4px #ddd;
+            width: 40%;
+            margin-left: 30%;
+            padding: 20px;
+        }
+        
+        h1 {
+            color: red;
+            text-align: center;
+        }
+        
+        label {
+            font-weight: bold;
+        }
+        
+        button {
+            padding: 10px;
+            background-color: #3498db;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            border-radius: 5px;
+            border: none;
+            margin-left: 40%;
+        }
+        
+        button:hover {
+            box-shadow: 0 0 5px #95a5a6;
+        }
+    </style>
+</head>
+
+<body>
+    <form onsubmit="kiem_tra()" action="">
+        <h1>FORM ĐĂNG KÍ</h1>
+        <label for="">Họ: </label><input id="ho" type="text"><br>
+        <label for="">Tên: </label><input id="ten" type="text"><br>
+        <label for="">Ngày sinh: </label> <input id="ngay" type="date"><br>
+        <label for="">Giới tính: </label><label for=""><input name="gt" type="radio">Nam</label>
+        <label for=""><input name="gt" type="radio">Nữ</label><br>
+        <label for="">Số điện thoại: </label><input id="sdt" type="text"><br>
+        <label for="">Sở thích: </label>
+        <label for=""><input id="check" type="checkbox">Đọc sách</label>
+        <label for=""><input id="check" type="checkbox">Đá bóng</label>
+        <label for=""><input id="check" type="checkbox">Xem phim</label>
+        <label for=""><input id="check" type="checkbox">May vá</label>
+        <label for=""><input id="check" type="checkbox">Nghe nhạc</label>
+        <label for=""><input id="check" type="checkbox" onclick="xuat(checked)">Khác</label><br>
+        <div id="hb" style="display: none;">
+            <label for="">Khác</label>
+            <input type="text">
+        </div>
+        <button>Đăng ký</button>
+    </form>
+
+</body>
+
+</html>

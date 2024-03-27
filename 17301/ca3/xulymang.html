@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dangthpc04349</title>
+</head>
+
+<body>
+    <script>
+        let n = parseInt(prompt("Nhập số phần tử")); //nhap so phan tu cua mang
+        if (n < 0) {
+            alert("Vui lòng nhập số dương!");
+            location.reload();
+        }
+        let array = new Array();
+        for (let i = 0; i < n; i++) {
+            array[i] = parseInt(prompt("Nhập giá trị Array[" + i + "]: "));
+            //push gia tri cho mang ARRAY
+        }
+
+        let count = 0;
+        let sum = 0;
+        for (let i = 0; i < array.length; i++) {
+            document.write("Array[" + i + "] = " + array[i] + "<br/>");
+            //Xuat gia tri cua tung phan tu ra man hinh
+            sum += array[i];
+            count++;
+        }
+        let avg = sum / count;
+        document.write("TBC: " + avg);
+        //Tinhs trung binh cong
+    </script>
+</body>
+
+</html>

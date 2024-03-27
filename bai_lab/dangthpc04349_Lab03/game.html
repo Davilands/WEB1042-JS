@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trần Hữu Đang</title>
+</head>
+
+<body>
+    <script>
+        while (true) {
+            var a = prompt("Nhập số của bạn: ");
+            if (a >= 0 && a <= 100) {
+                var so_bi_mat = Math.round(Math.random() * 100);
+                if (a == so_bi_mat) {
+                    alert("Đã đoán trúng");
+                    break;
+                } else if (a > so_bi_mat) alert("Số bí mật nhỏ hơn số của bạn");
+                else alert("Số bí mật lớn hơn số của bạn");
+            } else alert("Vui lòng nhập từ 0->100");
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    input{
+        background-color: rgb(32, 99, 77) ;
+        color: white;
+    }
+</style>
+    <script>
+
+function kiemtra() {
+            var ten = document.querySelector('#ten');
+            var pas = document.querySelector('#pass');
+            var phone = document.querySelector('#phone');
+            var mail = document.querySelector('#mail');
+
+
+            if (ten.value.length < 6) {
+                alert('Username không được trống, tối thiểu 6 ký tự')
+                return false;
+            }
+            if(mail.value<=0){
+                alert('Email không được để trống')
+                return false
+            }
+            if (pas.value.length <= 0) {
+                alert('Mật khẩu không được trống');
+                return false;
+            }
+
+            
+            if(phone.value >100 || phone.value<=0){
+                alert('Số năm làm việc phải là số dương bé hơn 100 và Mật khẩu không được trống');
+                return false;
+            }
+            alert('bạn đã đăng ký thành công ')
+            return true;
+            var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/; 
+            if (!filter.test(mail.value)) { 
+             alert('Hay nhap dia chi email hop le.\nExample@gmail.com');
+             email.focus; 
+             return false; 
+    }
+        }
+        
+    </script>
+    <link rel="stylesheet" href="./bai1.css">
+</head>
+
+<body>
+    <form onsubmit="return kiemtra()">
+            <label for=""><input id="ten" type="text" placeholder="User" style="width: 200px;"></label> <br> <br>
+            <label for=""><input id="mail" type="email" placeholder="Email" style="width: 200px;"></label> <br><br>
+            <label for=""><input id="pass" type="password" placeholder="Password" style="width: 200px;"></label> <br><br>
+
+            <label for=""><input id="phone" type="text" placeholder="Số năm kinh nghiệm" style="width: 200px;"> </label> <br><br>
+
+
+            
+            <button style="background-color: orangered; color: white; width: 60px;">Gửi</button>
+
+
+    </form>
+</body>
+</html>

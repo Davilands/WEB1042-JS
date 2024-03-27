@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trần Hữu Đang</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div id="messagesDiv"></div>
+    <input type="text" id="nameInput" placeholder="Nhập tên...">
+    <input type="text" id="messageInput" placeholder="Tin nhắn...">
+    <script>
+        var myDataRef = new Firebase("https://lab07-a9529-default-rtdb.firebaseio.com/");
+        $('#messageInput').keypress(function(e) {
+            if (e.keyCode == 13) {
+                var name = $("#nameInput").val();
+                var text = $("#messageInput").val();
+                myDataRef.push({
+                    name: name,
+                    text: text
+                });
+                $('#messageInput').val('');
+            }
+        });
+        myDataRef.on('child_added', function(snapshot) {
+            var message = snapshot.val();
+            displayChatMessage(message.name, message.text);
+
+        });
+
+        function displayChatMessage(name, text) {
+            $('<div/>')
+                .text(text)
+                .prepend($('<em/>').text(name + ': '))
+                .appendTo($('#messagesDiv'));
+            $("#messagesDiv")[0].scrollTop = $("#messagesDiv")[0].scrollHeight;
+        };
+    </script>
+</body>
+
+</html>

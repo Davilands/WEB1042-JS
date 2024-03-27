@@ -1,0 +1,63 @@
+body {
+    background-color:rgb(117, 77, 77);
+    margin: 0px;
+    padding: 0px;
+}
+header{
+    background-color:white;
+    width: 100%;
+    height: 500px;
+}
+article{
+  background-color: rgb(117, 77, 77);
+    width: 100%;
+    height: 500px;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 17%;
+    margin: 20px;
+    text-align: center;
+    font-family: arial;
+    float: left;
+  }
+
+  .price {
+    color: rgb(216, 211, 211);
+    font-size: 22px;
+  }
+  .span{
+    color: rgb(216, 211, 211);
+    font-size: 22px; 
+  }
+
+  .card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .card button:hover {
+    opacity: 0.7;
+  }
+
+  .cart {
+    float: right;
+  }
+
+  table>thead>tr>th{
+      padding-left: 20px;
+      padding-right: 20px;
+      
+
+  }
+  table{
+    position: relative;
+    left: 380px;
+  }

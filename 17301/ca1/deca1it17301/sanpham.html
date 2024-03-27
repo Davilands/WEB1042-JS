@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sản phẩm</title>
+  <link rel="stylesheet" href="./vohang.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="card">
+      <img src="H1.jpg" alt="Apple Watch" style="width: 100%" />
+      <h1>Iphone12</h1>
+      <p class="price">19.99</p>
+      <p>Some text about the Apple Watch..</p>
+      <button onclick="addCart()">Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="H2.jpg" alt="Apple Watch" style="width: 100%" />
+      <h1>Iphone13</h1>
+      <p class="span"> <span>$</span><span class="price">16.99</span></p>
+      <p>Some text about the Apple Watch..</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="H3.jpg" alt="Apple Watch" style="width: 100%;" />
+      <h1>Iphone10</h1>
+      <p class="span"> <span>$</span><span class="price">10.99</span></p>
+      <p>Some text about the Apple Watch..</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="H4.jpg" alt="Apple Watch" style="width: 100%" />
+      <h1>Iphone19</h1>
+      <p class="span"> <span>$</span><span class="price">11.99</span></p>
+      <p>Some text about the Apple Watch..</p>
+      <button>Add to Cart</button>
+    </div>
+    <div class="card">
+      <img src="H5.jpg" alt="Apple Watch" style="width: 100% ; text-align: center;" />
+      <h1>Iphone11</h1>
+      <p class="span"> <span>$</span><span class="price">17.99</span></p>
+      <p>Some text about the Apple Watch..</p>
+      <button>Add to Cart</button>
+    </div>
+
+  </header> <br>
+ <hr>
+  <article>
+    <h2 style=" text-align: center; color: aqua;">Đặt Hàng</h2>
+    <form action="">
+      <table border="1">
+        <thead>
+          <tr style="text-align: center; background-color:gray;color:white;">
+            <th>STT</th>
+            <th style="width: 180px; padding: 15px;">Hình</th>
+            <th >Tên sản phẩm</th>
+            <th>Đơn giá</th>
+            <th>số lượng</th>
+            <th>Thành tiền</th>
+            <th>Xóa</th>
+          </tr>
+
+        </thead>
+        <tbody>
+          <thead>
+            <tr>
+              <th style="text-align: center; background-color: gray;color: white;">Tổng</th>
+              <th colspan="6" style="text-align: center; background-color: gray;color: white;">
+                <div class="price-total">
+                  <p>Tổng tiền: $<span>0</span></p>
+    
+                </div>
+              </th>
+            </tr>
+          </thead>
+      </table>
+      <button onclick="checkout();" style="font-weight: bolder; padding: 10px;position: relative; left: 730px;" >Thanh Toán</button>
+
+
+    </form>
+
+  </article>
+
+</body>
+
+<script src="./vohang.js"></script>
+
+</html>

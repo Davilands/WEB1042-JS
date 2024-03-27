@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dangthpc04349</title>
+    <script type="text/javascript">
+        function isName(user) {
+            var isValid = false;
+            var regex = /^[a-zA-Z0-9]+$/;
+            if (regex.test(user)) {
+                isValid = true;
+            }
+            return isValid;
+        }
+
+        function check() {
+            //check username
+            var user = document.getElementById('user').value;
+            var pass = document.getElementById('pass').value;
+            var pass_2 = document.getElementById('pass_2').value;
+            if ((user == "" || user == null) && (pass == null || pass == "") && (pass_2 == null || pass_2 == "")) {
+                alert("Bạn phải nhập đầy đủ dữ liệu cho form!");
+                return false;
+            }
+            //var check = new RegExp("^[a-zA-Z0-9]+$");
+            // checkUser(user);
+            if (user.length < 5) {
+                if (user == "" || user == null) {
+                    alert("Tên không được để trống");
+                    return false;
+                } else {
+                    alert('Tên phải chứa tối thiểu 5 kí tự');
+                    return false;
+                }
+            } else if (isName(user) == false) {
+                alert('Tên đăng nhập không chứa kí tự đặt biệt!');
+                return false;
+            }
+            // =========================
+            //========================
+            // mật khẩu
+
+            if (pass == "" || pass == null) {
+                alert("Mật khẩu không được trống!");
+                return false;
+            } else {
+                if (pass.length < 8) {
+                    alert("Mật khẩu tối thiểu 8 ký tự");
+                    return false;
+                }
+            }
+            if (pass != pass_2) {
+                alert("Mật khẩu nhập lại phải trùng");
+                return false;
+            }
+            alert("Cập nhật thành công!");
+            location.reload();
+        }
+    </script>
+    <style>
+        body {
+            justify-content: center;
+            margin: 0 auto;
+            display: flex;
+        }
+        
+        button {
+            background-color: orange;
+            color: black;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <h1 style=" color:blue">THAY ĐỔI MẬT KHẨU</h1>
+
+        <input placeholder="Tên đăng nhập.." type="text" name="" id="user"> <br> <br>
+        <input placeholder="Mật khẩu mới.." type="password" name="" id="pass"> <br> <br>
+        <input placeholder="Nhập lại mật khẩu.." type="password" name="" id="pass_2"> <br> <br>
+        <button onclick="check()">Cập nhật</button>
+    </div>
+</body>
+
+</html>

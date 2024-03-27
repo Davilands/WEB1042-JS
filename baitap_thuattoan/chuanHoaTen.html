@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let str = prompt("Nhập tên");
+        // console.log("Hello".toUpperCase());
+        //> HELLO
+        //==========
+
+        // console.log("Hello".toLowerCase());
+        //> hello
+
+
+        //===========tran huu dang
+        //chuan hoa ho ten
+        var kq = "";
+        kq = str.charAt(0).toUpperCase() + str.slice(1);
+        for (let i = 1; i < str.length; i++) {
+            if (str.charAt(i) == " ") {
+                kq = kq.substring(0, i + 1) + str.charAt(i + 1).toLocaleUpperCase() + str.slice(i + 2);
+
+            }
+        }
+        alert(kq);
+    </script>
+</body>
+
+</html>

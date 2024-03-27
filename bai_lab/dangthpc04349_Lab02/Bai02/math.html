@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhập số thực</title>
+</head>
+
+<body>
+    <script>
+        var x = prompt("Nhập vào một số: ");
+        if (isNaN(x) == true) {
+            alert("ERROR " + x + " không phải số!");
+        } else {
+            var a = Math.sqrt(x);
+            alert(a + " là căn bậc hai của " + x);
+            var b = Math.pow(x, 2);
+            alert(b + " là bình phương của " + x);
+            var c = Math.round(x);
+            alert(c + " là số làm tròn của " + x);
+        }
+    </script>
+</body>
+
+</html>

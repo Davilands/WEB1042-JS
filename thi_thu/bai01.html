@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <Script>
+        var a = parseFloat(prompt("Nhập vào giá trị a: "));
+        var b = parseFloat(prompt("Nhập vào giá trị b: "));
+        var c = parseFloat(prompt("Nhập vào giá trị c: "));
+        if (a + b > c && b + c > a && a + c > b) {
+            alert("Đây là ba cạnh của tam giác ")
+            if (a == b && b == c && c == a) {
+                alert("Đây là tam giác đều");
+            } else if (a == b || b == c || c == a) {
+                alert("Đây là tam giác cân");
+            } else if (a * a == b * b + c * c || b * b == a * a + c * c || c * c == a * a + b * b) {
+                alert("Đây là tam giác vuông");
+            } else {
+                alert("Đây là tam giác thường")
+            }
+        } else {
+            alert("Đây không phải ba cạnh của tam giác");
+        }
+    </Script>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+.khung {
+    border: 1px solid black;
+    height: 80px;
+    width: 200px;
+    justify-content: space-between;
+    display: flex;
+    border-radius: 10px;
+}
+
+input[type='button'] {
+    height: 50px;
+    width: 80px;
+    font-weight: bold;
+    border-radius: 10px;
+    margin: 10px;
+}

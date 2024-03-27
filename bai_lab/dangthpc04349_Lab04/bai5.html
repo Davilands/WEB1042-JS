@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiem tra tam giac</title>
+</head>
+
+<body>
+    <script>
+        var tamGiac = new Object();
+
+        // tamGiac.a = parseFloat("Nhập vào cạnh thứ nhất: ");
+        // tamGiac.b = parseFloat("Nhập vào cạnh thứ hai: ");
+        // tamGiac.c = parseFloat("Nhập vào cạnh thứ ba: ");
+        //
+        tamGiac.a = parseFloat(prompt("Nhập vào cạnh thứ nhất: "))
+        tamGiac.b = parseFloat(prompt("Nhập vào cạnh thứ hai: "))
+        tamGiac.c = parseFloat(prompt("Nhập vào cạnh thứ ba: "))
+        tamGiac.kiemTra = function() {
+            var check = "";
+            if ((this.a == 0) || this.b == 0 || this.c == 0 || this.a < 0 || this.b < 0 || this.c < 0)
+                check = "Không thể tạo thành ba cạnh của một tam giác!";
+            else {
+                if ((tamGiac.a + tamGiac.b > tamGiac.c) && (tamGiac.a + tamGiac.c > tamGiac.b) && (tamGiac.b + tamGiac.c > tamGiac.a)) {
+                    check = check + "Có thể tạo thành tam giác ";
+                    if ((this.a == this.b) && (this.b == this.c) && (this.c == this.a)) {
+                        check = check + "đều!";
+                    } else if ((this.a == this.b) || (this.b == this.c) || (this.c == this.a)) {
+                        check = check + "cân!";
+                    } else if ((this.a * this.a == this.b * this.b + this.c * this.c) || (this.b * this.b == this.a * this.a + this.c * this.c) || (this.c * this.c == this.b * this.b + this.a * this.a)) {
+                        check = check + "vuông!";
+                    } else {
+                        check = check + "thường!";
+                    }
+                } else {
+                    check = "Không thể tạo thành ba cạnh của một tam giác!";
+                }
+            }
+            return check;
+        }
+        tamGiac.out = function() {
+            alert(this.a + " " + this.b + " " + this.c + ": " +
+                tamGiac.kiemTra());
+            location.reload();
+        }
+    </script>
+    <button onclick="tamGiac.out()">CHECK</button>
+</body>
+
+</html>

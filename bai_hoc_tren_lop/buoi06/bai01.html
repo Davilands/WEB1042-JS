@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <script type="text/javascript">
+        function xanhButtonClick() {
+            var blue = "toi da doi thanh mau xanh";
+            var pText = document.getElementById("pText");
+            //document.getElementById("pText").innerText = blue;
+            pText.innerText = blue;
+            pText.style.color = "blue";
+        }
+
+        function doButtonClick() {
+            var pText = document.getElementById("pText");
+            var red = "toi da doi thanh mau do";
+            //document.getElementById("pText").innerText = red;
+            pText.innerText = red;
+            pText.style.color = "red";
+        }
+    </script>
+</head>
+
+<body>
+    <p id="pText">Thiet lap style bang ID</p>
+    <button onclick="xanhButtonClick();">Xanh</button>
+    <button onclick="doButtonClick();">Do</button>
+</body>
+
+</html>

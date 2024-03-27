@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trần Hữu Đang</title>
+</head>
+
+<body>
+    <script>
+        var a, b, c;
+        do {
+            a = parseFloat(prompt("Nhập số thứ  nhất: "));
+            b = parseFloat(prompt("Nhập số thứ  hai: "));
+            c = prompt("Nhập phép toán (+)/(-)/(*)/(/): ");
+            switch (c) {
+                case '+':
+                    alert("Tổng: " + a + " + " + b + " = " + (a + b));
+                    break;
+                case '-':
+                    alert("Hiệu: " + a + " - " + b + " = " + (a - b));
+                    break;
+                case '*':
+                    alert("Tích: " + a + " x " + b + " = " + (a * b));
+                    break;
+                case '/':
+                    alert("Thương: " + a + " : " + b + " = " + (a / b));
+                    break;
+                default:
+                    alert("Nhập sai vui lòng nhập lại!");
+            }
+            var o = prompt("Bạn có muốn tiếp tục (0-không): ");
+            if (o == 0) {
+                alert("Cảm ơn đã sử dụng!");
+                break;
+            }
+        } while (true);
+    </script>
+</body>
+
+</html>
